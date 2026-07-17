@@ -91,8 +91,5 @@ Se você utilizar este código ou os dados em sua pesquisa, por favor, cite as s
 * Agraj Magotra, Md. Rafiqul Islam Rana, Shishir, Fairuz Shadmani Shishir, and Sumaiya Shomaji. 2026. A machine learning and NLP pipeline for analyzing ESG and sustainability disclosures in the textile and apparel industry. Scientific Reports (apr 2026). doi:10.1038/s41598-026-49931-z
 * Aijaz Panhwar, Abdul Sattar Jatoi, Shaukat Ali Mazari, Aftab Kandhro, Uzma Rashid, and Sofia Qaisar. 2024. Water resources contamination and health hazards by textile industry effluent and glance at treatment techniques: A review. Waste Management Bulletin 1, 4 (mar 2024), 158–163. doi:10.1016/j.wmb.2023.09.002
 
-### Layout de Forças Fruchterman-Reingold (Grafos):
-Fruchterman, T. M., & Reingold, E. M. (1991). Graph drawing by force-directed placement. Software: Practice and Experience, 21(11), 1129-1164.
-
 ## 📄 Licença
 Este projeto é licenciado sob a Licença MIT - consulte o arquivo LICENSE para obter mais detalhes.
