@@ -65,3 +65,18 @@ Sob validação cruzada robusta (**k=5**), as representações contínuas basead
 │
 ├── LICENSE                                     # Licença MIT de uso livre
 └── README.md                                   # Este documento de apresentação
+```
+
+## ⚙️ Ambiente e Instalação
+
+O projeto foi planejado e testado para rodar de forma consistente tanto localmente quanto de maneira isolada no Google Colab.
+
+### Dependências
+
+As versões das bibliotecas foram fixadas no arquivo requirements.txt para evitar incompatibilidades com atualizações futuras dos ecossistemas de Machine Learning:
+* Python == 3.12
+* Gensim == 4.3.2
+* SciPy == 1.10
+* NetworkX == 3.0
+* Pandas == 1.3.0
+* Scikit-Learn == 0.24.0
