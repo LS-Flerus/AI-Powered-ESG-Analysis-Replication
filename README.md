@@ -32,8 +32,8 @@ O modelo NMF demonstrou superioridade semântica ao isolar com sucesso os quatro
 
 | Algoritmo | Métrica de Coerência (C_v) | Estabilidade Semântica |
 | :--- | :---: | :---: |
-| **LDA** (Latent Dirichlet Allocation) | 0.3756 | Baixa (termos sobrepostos) |
-| **NMF** (Non-Negative Matrix Factorization) | **Superior** | Alta (distância de cosseno ~ 1.0) |
+| **LDA** (Latent Dirichlet Allocation) | 0.3 | Baixa |
+| **NMF** (Non-Negative Matrix Factorization) | 0.3756 | Alta |
 
 ### 2. Desempenho do Classificador (Random Forest + Word2Vec)
 Sob validação cruzada robusta (**k=5**), as representações contínuas baseadas na hipótese distribucional garantiram alta acurácia preditiva:
@@ -48,9 +48,20 @@ Sob validação cruzada robusta (**k=5**), as representações contínuas basead
 ## 📁 Estrutura do Repositório
 
 ```text
-├── data/                             # Dados secundários brutos e dicionários ESG
-│   └── text_corpus_82_factories.csv  # Corpus de relatórios das 82 corporações
-├── ESG_Replication_Pipeline.ipynb    # Notebook interativo com o pipeline completo
-├── requirements.txt                  # Dependências e bibliotecas do projeto
-├── LICENSE                           # Licença MIT de uso livre
-└── README.md                         # Este documento de apresentação
+├── Data/                                       # Dados secundários brutos e dicionários ESG
+│   ├── Machine Learning Pipeline               # Dados necessários para a execução da pipeline de aprendizagem de máquina
+│   │   ├── Keywords Updated Data 01_08.xlsx
+│   │   ├── Topic 1 Keywords.xlsx
+│   │   ├── Topic 2 Keywords.xlsx
+│   │   ├── Topic 3 Keywords.xlsx
+│   │   ├── topic_4.xlsx
+│   │   
+│   └── Topic Modeling                          # Dados necessários para a execução da modelagem de tópicos
+│       └── Company_Data__.xlsx
+│ 
+├── Notebooks                                   # Notebooks interativos utilizados no experimento
+│   ├── NMF_Topic_Modeling_Final.ipynb          # Notebook contendo a modelagem de tópicos
+│   └── Textile_ML_Pipeline.ipynb               # Noteboom contendo a pipeline de aprendizagem de máquina
+│
+├── LICENSE                                     # Licença MIT de uso livre
+└── README.md                                   # Este documento de apresentação
