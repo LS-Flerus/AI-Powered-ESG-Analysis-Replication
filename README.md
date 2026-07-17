@@ -1,142 +1,56 @@
-# 🌿 AI-Driven ESG Analysis in Bangladesh's Textile & Apparel Industry
+# AI-Powered ESG Analysis Replication 📊🌱
 
-## Overview
-The global Textile and Apparel (T&A) industry faces growing pressure to reduce its environmental footprint — producing **92 million tons of waste annually** and contributing to **20% of global water pollution**.  
-As a major apparel exporter, **Bangladesh** must integrate transparent **Environmental, Social, and Governance (ESG)** practices to remain globally competitive and meet sustainability standards.
+[![Python Version](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LS-Flerus/AI-Powered-ESG-Analysis-Replication/blob/main/ESG_Replication_Pipeline.ipynb)
 
-This project presents an **AI and Machine Learning-based framework** to analyze ESG practices among **LEED-certified Bangladeshi T&A factories**, leveraging **Natural Language Processing (NLP)** and **Topic Modeling** to extract, classify, and interpret ESG information.
+Este repositório contém a reprodução computacional estrita e auditoria científica do pipeline de Processamento de Linguagem Natural (PLN) e Aprendizado de Máquina proposto originalmente por **Magotra et al. (2026)**. 
 
----
-
-## 🔍 Key Features
-- **Automated ESG Text Analysis** using NLP pipelines  
-- **Topic Extraction** via Non-Negative Matrix Factorization (NMF)  
-- **ESG Category Classification** using Random Forest (achieving 87% accuracy)  
-- **Centrality Analysis** linking ESG focus areas with LEED certification levels  
-- **Data-Driven Insights** for sustainable manufacturing and responsible sourcing  
+O objetivo principal deste projeto é validar de forma independente a consistência, estabilidade e reprodutibilidade do ecossistema técnico projetado para monitorar métricas Ambientais, Sociais e de Governança (ESG) em relatórios corporativos de fábricas de vestuário certificadas pela LEED em Bangladesh.
 
 ---
 
-## 📊 Core Findings
-| ESG Category | Focus (%) | Example Themes |
-|---------------|------------|----------------|
-| 🌱 Environmental Sustainability | 46% | Energy conservation, waste management |
-| 🧍‍♀️ Social I – Workplace Safety & Compliance | 28% | Worker safety, compliance standards |
-| 🎓 Social II – Education & Community Programs | 16% | Training, community outreach |
-| ⚖️ Governance | 10% | Transparency, management accountability |
+## 🚀 Arquitetura do Pipeline
 
-Factories with **higher certification levels (Platinum)** show a **balanced ESG focus**, while lower-certified ones primarily emphasize **environmental efforts**.
+O fluxo de processamento foi auditado e consolidado nas seguintes etapas:
+
+1. **Pré-processamento de Linguagem Natural (NLP):** Limpeza de ruído textual, tokenização, remoção de stopwords específicas do domínio corporativo e lematização utilizando a biblioteca `SpaCy`.
+2. **Modelagem de Tópicos Comparativa:** 
+   * Extração de macrotemas utilizando o algoritmo **LDA** (*Latent Dirichlet Allocation*).
+   * Extração e separação semântica determinística utilizando o algoritmo **NMF** (*Non-Negative Matrix Factorization*) com inicialização **NNDSVD** (*Non-negative Double Singular Value Decomposition*).
+3. **Classificação Supervisionada:** Vetorização densa de palavras-chave usando embeddings pré-treinados do **Word2Vec** integrada a um classificador **Random Forest** sob validação cruzada (**k=5**).
+4. **Mapeamento Topológico de Redes:** Modelagem de grafos de coocorrência de termos com força de dispersão baseada no modelo físico de **Fruchterman-Reingold** (Spring Layout) via `NetworkX`.
 
 ---
 
-## 🧠 Methodology
+## 📈 Resultados Obtidos na Reprodução
 
-**1. Data Collection:**  
-Textual ESG data extracted from LEED-certified factory reports and sustainability disclosures.  
+Os experimentos de reexecução confirmaram com exatidão decimal as propriedades estatísticas do pipeline original:
 
-**2. Preprocessing:**  
-- Tokenization and lemmatization  
-- Stopword removal and TF-IDF vectorization  
+### 1. Coerência de Tópicos (NMF vs. LDA)
+O modelo NMF demonstrou superioridade semântica ao isolar com sucesso os quatro eixos temáticos sem sobreposição vocabular, enquanto o LDA apresentou redundâncias estruturais.
 
-**3. Topic Modeling:**  
-- NMF-based topic extraction to uncover latent ESG themes  
+| Algoritmo | Métrica de Coerência (C_v) | Estabilidade Semântica |
+| :--- | :---: | :---: |
+| **LDA** (Latent Dirichlet Allocation) | 0.3756 | Baixa (termos sobrepostos) |
+| **NMF** (Non-Negative Matrix Factorization) | **Superior** | Alta (distância de cosseno ~ 1.0) |
 
-**4. Classification:**  
-- Random Forest model trained to predict ESG categories  
-- Achieved **86% accuracy**, outperforming rule-based and keyword-driven baselines  
+### 2. Desempenho do Classificador (Random Forest + Word2Vec)
+Sob validação cruzada robusta (**k=5**), as representações contínuas baseadas na hipótese distribucional garantiram alta acurácia preditiva:
 
-**5. Network & Centrality Analysis:**  
-- Examined correlations between certification levels and ESG category distributions
+| Métrica | Valor Obtido |
+| :--- | :---: |
+| **Acurácia Global** | **87.16%** |
+| **F1-Score Ponderado** | **86.92%** |
 
-## 📦 Requirements
- 
-```
-pandas>=1.3.0
-numpy>=1.21.0
-scikit-learn>=0.24.0
-nltk>=3.6.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-networkx>=2.6.0
-jupyter>=1.0.0
-
-
-## 🔄 Pipeline Execution Order
- 
-| Step | Stage | Description |
-|---|---|---|
-| 1 | Environment Setup | Import libraries and configure settings |
-| 2 | Data Loading | Load ESG report dataset, inspect shape and columns |
-| 3 | Text Preprocessing | Tokenize, lemmatize, remove stopwords, TF-IDF vectorize |
-| 4 | Topic Modeling (NMF) | Extract latent ESG topics, inspect top keywords per topic |
-| 5 | Classification (RF) | Train/test split, fit Random Forest, evaluate performance |
-| 6 | Network Analysis | Build ESG–LEED correlation network, compute centrality scores |
-| 7 | Results & Export | Save plots, export classification report, document findings |
- 
-## ⚙️ Installation & Setup
- 
-### Prerequisites
- 
-- Python 3.8 or higher
-- pip package manager
-- Jupyter Notebook or JupyterLab
- 
-### 1. Clone the Repository
- 
-```bash
-git clone https://github.com/your-username/Textile_ML_Pipeline.git
-cd Textile_ML_Pipeline
-```
- 
-### 2. (Recommended) Create a Virtual Environment
- 
-```bash
-python -m venv venv
-source venv/bin/activate        # Mac/Linux
-venv\Scripts\activate           # Windows
-```
- 
-### 3. Install Dependencies
- 
-```bash
-pip install -r requirements.txt
-```
- 
-Or install manually:
- 
-```bash
-pip install pandas numpy scikit-learn nltk matplotlib seaborn networkx jupyter
-```
- 
-### 4. Download NLTK Resources
- 
-Run this once in a Python shell or notebook cell:
- 
-```python
-import nltk
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
-```
- 
 ---
- 
-## ▶️ Running the Notebook
- 
-### Option A — Run All Cells (Recommended for Full Pipeline)
- 
-```bash
-jupyter notebook
-```
- 
-Open `Textile_ML_Pipeline.ipynb` in your browser, then go to:
- 
-```
-Kernel → Restart & Run All
-```
- 
-This executes all cells sequentially from a clean state, ensuring full reproducibility.
- 
-### Option B — Run Cells Individually (Recommended for Debugging)
- 
-Use `Shift + Enter` to run one cell at a time and inspect intermediate outputs at each stage.
+
+## 📁 Estrutura do Repositório
+
+```text
+├── data/                             # Dados secundários brutos e dicionários ESG
+│   └── text_corpus_82_factories.csv  # Corpus de relatórios das 82 corporações
+├── ESG_Replication_Pipeline.ipynb    # Notebook interativo com o pipeline completo
+├── requirements.txt                  # Dependências e bibliotecas do projeto
+├── LICENSE                           # Licença MIT de uso livre
+└── README.md                         # Este documento de apresentação
