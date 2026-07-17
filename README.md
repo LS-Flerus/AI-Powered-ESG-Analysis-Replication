@@ -67,7 +67,7 @@ Sob validação cruzada robusta (**k=5**), as representações contínuas basead
 └── README.md                                   # Este documento de apresentação
 ```
 
-## ⚙️ Ambiente e Instalação
+## ⚙️ Ambiente e Execução
 
 O projeto foi planejado e testado para rodar de forma consistente tanto localmente quanto de maneira isolada no Google Colab.
 
@@ -80,6 +80,10 @@ As versões das bibliotecas foram fixadas para o notebook contendo a pipeline de
 * NetworkX == 3.0
 * Pandas == 1.3.0
 * Scikit-Learn == 0.24.0
+
+### Execução
+
+O experimento foi idealizado para ser de fácil reprodução. Diante disso, para executar ambos Jupyter Notebooks é necessário apenas fazer o upload dos mesmos no Google Colab e executar ambos.
 
 ## ✍️ Referências Acadêmicas
 Se você utilizar este código ou os dados em sua pesquisa, por favor, cite as seguintes referências fundamentais:
