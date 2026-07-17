@@ -84,17 +84,12 @@ As versões das bibliotecas foram fixadas para o notebook contendo a pipeline de
 ## ✍️ Referências Acadêmicas
 Se você utilizar este código ou os dados em sua pesquisa, por favor, cite as seguintes referências fundamentais:
 
-### Estudo Original Auditado:
-Magotra, R., et al. (2026). Machine learning and NLP pipeline for ESG analysis in textile industries (LEED-certified apparel factories in Bangladesh). Scientific Reports.
-
-### Inicialização Determinística NNDSVD para NMF:
-Boutsidis, C., & Gallopoulos, E. (2008). SVD-based initialization: A head start for nonnegative matrix factorization. Pattern Recognition, 41(4), 1350-1362.
-
-### Métrica de Coerência de Tópicos ($C_v$):
-Röder, M., Both, A., & Hinneburg, A. (2015). Exploring the space of topic coherence measures. In Proceedings of the eighth ACM international conference on Web search and data mining (pp. 399-408).
-
-### Embeddings Distribuídos de Palavras (Word2Vec):
-Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781.
+* Christos Boutsidis and Efstratios Gallopoulos. 2008. SVD-based initialization: A head start for nonnegative matrix factorization. Pattern Recognition 41, 4 (2008), 1350–1362.
+* Julian Eggert and Edgar Körner. 2004. Sparse coding and NMF. In Proceedings of the 2004 IEEE International Joint Conference on Neural Networks, Vol. 4. IEEE, 2529–2533.
+* International Labour Organization. 2023. The Rana Plaza disaster ten years on: What has changed? InfoStories. Acessado em: 25 mai. 2026. https://webapps.ilo.org/infostories/en-GB/Stories/Country-Focus/rana-plaza.html
+* Md. Saiful Islam, Md. Abdur Rakib, and Atm Adnan. 2016. Ready-made garments sector of Bangladesh: Its contribution and challenges towards development. Stud 5 (2016), 02–12.
+* Agraj Magotra, Md. Rafiqul Islam Rana, Shishir, Fairuz Shadmani Shishir, and Sumaiya Shomaji. 2026. A machine learning and NLP pipeline for analyzing ESG and sustainability disclosures in the textile and apparel industry. Scientific Reports (apr 2026). doi:10.1038/s41598-026-49931-z
+* Aijaz Panhwar, Abdul Sattar Jatoi, Shaukat Ali Mazari, Aftab Kandhro, Uzma Rashid, and Sofia Qaisar. 2024. Water resources contamination and health hazards by textile industry effluent and glance at treatment techniques: A review. Waste Management Bulletin 1, 4 (mar 2024), 158–163. doi:10.1016/j.wmb.2023.09.002
 
 ### Layout de Forças Fruchterman-Reingold (Grafos):
 Fruchterman, T. M., & Reingold, E. M. (1991). Graph drawing by force-directed placement. Software: Practice and Experience, 21(11), 1129-1164.
