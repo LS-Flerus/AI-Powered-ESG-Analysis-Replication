@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LS-Flerus/AI-Powered-ESG-Analysis-Replication/blob/main/ESG_Replication_Pipeline.ipynb)
 
-Este repositório contém a reprodução computacional estrita e auditoria científica do pipeline de Processamento de Linguagem Natural (PLN) e Aprendizado de Máquina proposto originalmente por **Magotra et al. (2026)**. 
+Este repositório contém a reprodução computacional estrita e auditoria científica do pipeline de Processamento de Linguagem Natural (PLN) e Aprendizado de Máquina proposto originalmente por **Magotra et al. (2026)** ((https://doi.org/10.1038/s41598-026-49931-z)). 
 
 O objetivo principal deste projeto é validar de forma independente a consistência, estabilidade e reprodutibilidade do ecossistema técnico projetado para monitorar métricas Ambientais, Sociais e de Governança (ESG) em relatórios corporativos de fábricas de vestuário certificadas pela LEED em Bangladesh.
 
@@ -73,10 +73,31 @@ O projeto foi planejado e testado para rodar de forma consistente tanto localmen
 
 ### Dependências
 
-As versões das bibliotecas foram fixadas no arquivo requirements.txt para evitar incompatibilidades com atualizações futuras dos ecossistemas de Machine Learning:
+As versões das bibliotecas foram fixadas para o notebook contendo a pipeline de Aprendizagem de Máquina para ser possível executar o código proveniente do estudo original que o presente trabalho reproduz:
 * Python == 3.12
 * Gensim == 4.3.2
 * SciPy == 1.10
 * NetworkX == 3.0
 * Pandas == 1.3.0
 * Scikit-Learn == 0.24.0
+
+## ✍️ Referências Acadêmicas
+Se você utilizar este código ou os dados em sua pesquisa, por favor, cite as seguintes referências fundamentais:
+
+### Estudo Original Auditado:
+Magotra, R., et al. (2026). Machine learning and NLP pipeline for ESG analysis in textile industries (LEED-certified apparel factories in Bangladesh). Scientific Reports.
+
+### Inicialização Determinística NNDSVD para NMF:
+Boutsidis, C., & Gallopoulos, E. (2008). SVD-based initialization: A head start for nonnegative matrix factorization. Pattern Recognition, 41(4), 1350-1362.
+
+### Métrica de Coerência de Tópicos ($C_v$):
+Röder, M., Both, A., & Hinneburg, A. (2015). Exploring the space of topic coherence measures. In Proceedings of the eighth ACM international conference on Web search and data mining (pp. 399-408).
+
+### Embeddings Distribuídos de Palavras (Word2Vec):
+Mikolov, T., Chen, K., Corrado, G., & Dean, J. (2013). Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781.
+
+### Layout de Forças Fruchterman-Reingold (Grafos):
+Fruchterman, T. M., & Reingold, E. M. (1991). Graph drawing by force-directed placement. Software: Practice and Experience, 21(11), 1129-1164.
+
+## 📄 Licença
+Este projeto é licenciado sob a Licença MIT - consulte o arquivo LICENSE para obter mais detalhes.
