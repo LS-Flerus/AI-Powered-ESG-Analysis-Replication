@@ -81,9 +81,20 @@ As versões das bibliotecas foram fixadas para o notebook contendo a pipeline de
 * Pandas == 1.3.0
 * Scikit-Learn == 0.24.0
 
-### Execução
+### Como executar o experimento
 
-O experimento foi idealizado para ser de fácil reprodução. Diante disso, para executar ambos Jupyter Notebooks é necessário apenas fazer o upload dos mesmos no Google Colab e executar ambos.
+O experimento foi idealizado para ser de fácil reprodução. Seguem adiante instruções para auxiliar isso:
+
+1. Clonar o repositório;
+
+2. Fazer upload do repositório para o seu drive pessoal;
+
+3. Abrir os Jupyter Notebooks no Google Colab
+
+   3.1. Para executar o notebook NMF_Topic_Modeling_Final.ipynb responsável pela modelágem de tópicos, use a opção "executar tudo" no menu de "Tempo de execução";
+   3.2. Para executar o notebook Textile_ML_Pipeline.ipynb responsável pelo pipeline de aprendizagem de máquina, use a opção "executar tudo" no menu de "Tempo de execução". A primeira execução irá falhar logo           após a primeira célula (instalação de dependências específicas). Após essa falha, acesse novamente o menu "Tempo de execução" no Colab e selecione "Reiniciar sessão e executar tudo". Desta forma, o notebook inteiro será executado sem mais problemas.
+
+Vale destacar que o notebook Textile_ML_Pipeline.ipynb chega muito próximo ao limite de RAM utilizado pelo Google Colab (12,7GB), logo é extremamente recomendado que ao rodá-lo você não esteja com nenhuma outra sessão do Google Colab ativa.
 
 ## ✍️ Referências Acadêmicas
 Se você utilizar este código ou os dados em sua pesquisa, por favor, cite as seguintes referências fundamentais:
